@@ -13,7 +13,9 @@ FROM
     Booking b
 INNER JOIN 
     User u ON b.user_id = u.user_id;
-
+WHERE
+    r.review_id IS NULL
+    
 SELECT 
     p.property_id,
     p.name AS property_name,
