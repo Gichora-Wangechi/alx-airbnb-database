@@ -13,7 +13,7 @@ FROM
     Booking b
 INNER JOIN 
     User u ON b.user_id = u.user_id;
-WHERE
+AND
     r.review_id IS NULL
     
 SELECT 
