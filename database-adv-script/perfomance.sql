@@ -1,3 +1,4 @@
+--Initial query (complex join)
 -- Initial query: Retrieve all bookings with user, property, and payment details
 SELECT 
     b.id AS booking_id,
@@ -16,7 +17,6 @@ FROM Booking b
 JOIN User u ON b.user_id = u.id
 JOIN Property p ON b.property_id = p.id
 LEFT JOIN Payment pay ON b.id = pay.booking_id;
--- Initial query (complex join)
 
 EXPLAIN ANALYZE
 SELECT 
